@@ -2,7 +2,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: Rubik Doodle Shadow;
+    font-family: Rubik Doodle Shadow; 
 }
 
 body {
@@ -10,6 +10,16 @@ body {
     text-align: center;
     height: 100vh;
     overflow: hidden;
+    cursor: wait;
+}
+
+span {
+    position: absolute;
+    display: block;
+    pointer-events: none;
+    z-index: 10000000;
+    font-size: 16px;
+    will-change: transform;
 }
 
 .website {
