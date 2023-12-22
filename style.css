@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: Rubik Doodle Shadow;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.website {
+    padding-top: 100px;
+    height: 100%;
+    width: 100%;
+    background-image: url(./img/snow.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: scale(0.6);
+    box-shadow: 30px 30px 30px grey;
+    border-radius: 40px;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.website.show {
+    transform: scale(0.8);
+    opacity: 1;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 400;
+    margin-bottom: -50px;
+}
+
+.countdown-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: auto;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.countdown-container .element {
+    height: 120px;
+    width: 180px;
+}
+
+.countdown-container .number {
+    font-size: 5em;
+    font-weight: 600;
+    margin-bottom: -20px;
+}
+
+.number {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: 40px;
+    transition: opacity 1s ease-in-out;
+}
+
+.show {
+    opacity: 1 !important;
+}
+
+.snowflakes img{
+    width: 50px;
+    animation: snowflakes 7s linear infinite;
+
+}
+
+.snowflakes {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    animation: snowflakes-fade 0.3s ease-out forwards, snowflakes-fall 7s linear infinite; /* Pradedame 4 sekundžių po užkrovimo */
+}
+
+@keyframes snowflakes-fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes snowflakes-fall {
+    0% {
+        transform: translateY(-90vh);
+    }
+    20% {
+        transform: translateY(-50vh);
+    }
+    40% {
+        transform: translateY(-10vh);
+    }
+    60% {
+        transform: translateY(30vh);
+    }
+    80% {
+        transform: translateY(70vh);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.snowflakes img {
+    width: 50px;
+    animation: snowflakes 10s linear infinite;
+}
+
+@keyframes snowflakes {
+    0% {
+        transform: translateY(-90vh);
+        opacity: 0;
+    }
+    20% {
+        transform: translateY(-50vh);
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(-10vh);
+        opacity: 1;
+    }
+    60% {
+        transform: translateY(30vh);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(70vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+.snowflakes img:nth-child(1) {
+    animation-delay: 2s;
+    width: 25px;
+}
+
+.snowflakes img:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.snowflakes img:nth-child(3) {
+    animation-delay: 3s;
+    width: 25px;
+}
+
+.snowflakes img:nth-child(4) {
+    animation-delay: 5s;
+}
+
+.snowflakes img:nth-child(5) {
+    animation-delay: 13s;
+}
+
+.snowflakes img:nth-child(6) {
+    animation-delay: 10s;
+    width: 20px;
+}
+
+.snowflakes img:nth-child(7) {
+    animation-delay: 2s;
+    width: 35px;
+}
+.snowflakes img:nth-child(8) {
+    animation-delay: 12s;
+    width: 25px;
+}
+
+.snowflakes img:nth-child(9) {
+    animation-delay: 9s;
+}
+
+.snowflakes img:nth-child(10) {
+    animation-delay: 3s;
+    width: 25px;
+}
+
+.snowflakes img:nth-child(11) {
+    animation-delay: 1s;
+}
+
+.snowflakes img:nth-child(12) {
+    animation-delay: 3s;
+}
+
+.snowflakes img:nth-child(13) {
+    animation-delay: 15s;
+    width: 20px;
+}
+
+.snowflakes img:nth-child(14) {
+    animation-delay: 8s;
+    width: 35px;
+}
+
+@media (max-width: 426px){
+    body {
+        margin-top: 50px;
+    }
+}
