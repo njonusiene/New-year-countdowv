@@ -7,7 +7,7 @@ window.onload = function () {
     const countDownContainer = document.querySelector(".countdown-container")
     const website = document.querySelector(".website")
     const updateCountdown = () => {
-        const newYears = "1 Jan 2024"
+        const newYears = "1 Jan 2025"
         const newYearsDate = new Date(newYears)
         const currentDate = new Date()
         const totalSecondsLeft = (newYearsDate - currentDate) / 1000
